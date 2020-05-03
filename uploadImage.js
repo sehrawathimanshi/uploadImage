@@ -11,10 +11,13 @@ const imageType = "image/png";
 const bucket = process.env.Bucket;
 
 module.exports.handler = (event, context, callback) => {
+  console.log(event.body);
+  
   let requestBody = JSON.parse(event.body);
   let photoUrl = requestBody.photoUrl;
   let objectId = uuid();
   let objectKey = `resize-${width}x${height}-${objectId}.png`;
+  console.log('rrr')
 
   fetchImage(photoUrl)
     .then(image => image.resize(width, height).getBufferAsync(imageType))

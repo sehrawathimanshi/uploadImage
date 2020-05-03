@@ -6,13 +6,16 @@
 
 # The `service` block is the name of the service
 service: ImageUploaderService
+stage: dev
+plugins:
+  - serverless-offline
 
 # The `provider` block defines where your service will be deployed
 custom:
-  bucket: getting-started-lambda-example
+  bucket: image-upload-kra-kiwi
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs12.x
   region: eu-west-1
   stackName: imageUploader
   iamRoleStatements:

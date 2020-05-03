@@ -4,7 +4,11 @@
   "description": "",
   "license": "ISC",
   "dependencies": {
-    "jimp": "^0.6.4",
-    "uuid": "^3.3.2"
+    "aws-sdk": "^2.663.0",
+    "jimp": "^0.6.8",
+    "uuid": "^3.4.0"
+  },
+  "devDependencies": {
+    "serverless-offline": "^6.1.4"
   }
 }
